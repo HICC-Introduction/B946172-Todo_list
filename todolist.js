@@ -1,18 +1,29 @@
+//날짜 기록
+
+//시간 기록
 const timer = () => {
     const clock = document.querySelector('.clock');
-    const today = new Date();
-    let h = today.getHours();
+    const time = new Date();
+    var year = time.getFullYear();
+    var month = time.getMonth();
+    // 달을 받아옵니다 
+    var clockDate = time.getDate();
+    // 몇일인지 받아옵니다 
+    let h = time.getHours();
     if (h == 0) {
         h = 12;
     }
     clock.innerHTML = 
-        `${addZero(h)} : ${addZero(today.getMinutes())}`;
+				`${year}년 ${month+1}월 ${clockDate}일
+        ${addZero(h)}시 ${addZero(time.getMinutes())}분`;
+        
 }
 
 const addZero = (num) => {
     (num < 10) ? num = '0' + num : num;
     return num;
 }
+
 
 const start = () => {
   timer();
