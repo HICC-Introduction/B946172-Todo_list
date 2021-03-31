@@ -14,7 +14,7 @@ const timer = () => {
         h = 12;
     }
     clock.innerHTML = 
-				`${year}년 ${month+1}월 ${clockDate}일
+				`${year}년 ${month+1}월 ${clockDate}일 <br/>
         ${addZero(h)}시 ${addZero(time.getMinutes())}분`;
         
 }
