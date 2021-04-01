@@ -34,30 +34,73 @@ window.onload = start();
 
 //시간 끝
 
-const form = document.querySelector(".js-toDoForm"),
-    input = form.querySelector("input"),
-    list = document.querySelector(".js-toDoList")
+
+
+
+
+
+const toDoForm = document.querySelector('.js-toDoForm'),
+    toDoInput = toDoForm.querySelector("input"),
+    toDoList = document.querySelector('.js-toDoList');
 
 const TODOS_LS = 'toDos';
 
+let toDos = [];  
+function saveToDos () {  
+    localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
+}
+
+
 function paintToDo(text) {
-    console.log(text);
+    const li = document.createElement('li');
+    const span = document.createElement('span');
+    span.innerHTML = text;
+    li.appendChild(span);
+    toDoList.appendChild(li);
+    
+    const toDoObj = {
+        text : text,
+        id : toDos.length+1
+    }
+
+    toDos.push(toDoObj);
+    saveToDos(toDos);
 }
 
 function handleSubmit(event) {
     event.preventDefault();
-    const currentValue = input.value;
-    paintToDo(currentValue);
+    const toDoText = toDoInput.value;
+    paintToDo(toDoText);
+    toDoInput.value="";
+    
+    
 }
 
-function loadToDos(){
-    const toDos = localStorage.getItem()
+function loadToDolist() {
+    const getList = JSON.parse(localStorage.getItem(TODOS_LS));
+    if(getList === null){
+
+    }else{
+        getList.forEach(function(todo){
+            paintToDo(todo.text);
+        })
+    }
 }
+
+
+// 삭제버튼 구현해보기
+
+
+
+
+
+
 
 
 function init() {
-    loadToDos();
-    toDoForm.addEventListener("submit", handleSubmit)
+    loadToDolist();
+    toDoForm.addEventListener('submit',handleSubmit);
+
 }
 
 init();

@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <style>
-
+    div {
+      
+    }
     li {
       list-style:none;
     }
@@ -13,7 +15,7 @@
         }
         
         .left {
-            width: 35%;
+            width: 30%;
             float: left;
             box-sizing: border-box;
             background: #4C49F8;
@@ -21,20 +23,21 @@
 
         }
         .right {
-            width:65%;
+            width:70%;
             float: right;
             box-sizing: border-box;
             margin: 0%;
         } 
         .toDos {
-          width:25%;
+          width:28%;
           float: left;
           box-sizing: border-box;
           margin-left: 4%;
           margin-top: 3%;
+          border-radius: 5px;
         }
         form {
-          margin-left:45%;
+          margin-left:43%;
           width: 80%;
           margin-top: 0%;
         }
@@ -61,21 +64,22 @@
     
     <div class = "top" id="top">
       <form class="js-toDoForm">
-        <input type="text" id="text" placeholder="할 일을 입력하세요.">
+        <input type="text" id="input" placeholder="할 일을 입력하세요.">
         <button id="add-button">확인</button>
       </form>
+      <ul id="list">
+        
+      </ul>
       
       <div class="toDos" id="whatToDo">
-        <li class="js-toDoList" style="overflow-y:hidden;">
+        <li class="js-toDoList" style="overflow-y:hidden;" id="do">
         </li>
-           ddddd
       </div>
       
       <div class="toDos" id="whatYouDone">
-      <li class="js-doneList" style="overflow-y:hidden;">
+      <li class="js-doneList" style="overflow-y:hidden;" id="done">
         
       </li>
-      ddd
       </div>
      
      

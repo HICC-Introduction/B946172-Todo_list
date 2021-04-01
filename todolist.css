@@ -1,5 +1,5 @@
 #add-button {
-  width: 15%;
+  width: 8%;
   background-color: #4C49F8;
   border-radius: 5px;
   border: 3px #4C49F8;
@@ -8,8 +8,8 @@
   font-family: 'Noto Sans CJK KR';
 }
 
-#text {
-width: 40%;
+#input {
+width: 43%;
 border-radius: 5px;
 background-color: white;
 }
@@ -37,10 +37,14 @@ text-decoration: underline;
 #whatToDo {
 float: left;
 background-color: #DDDDDD;
+height: 70vh;
+box-shadow: 2px 2px 2px 2px #999;
 
 }
 
 #whatYouDone {
 float: left;
 background-color: #4F4F4F;
+height: 70vh;
+box-shadow: 2px 2px 2px 2px #999;
 }
