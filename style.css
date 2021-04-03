@@ -45,13 +45,13 @@
 .addToDo {
   display: flex;
   margin-top: 15%;
-  margin-bottom: 10%;
-  width: 90%;
+  margin-bottom: 7%;
+  width: 80%;
+
+  float:center;
 }
 
-.addTodoInfo .input-null {
-  border: 2px solid red;
-}
+
 
 .addToDoInfo {
   width: 70%;
@@ -63,7 +63,7 @@
 
   border-radius: 8px;
   border-color: #4C49F8;
-
+  float:center;
 
 }
 
@@ -100,7 +100,7 @@
   display: flex;
   justify-content: space-around;
   width: 100%;
-  margin: 0 auto;
+  margin: 0px;
 }
 .list .activeToDo {
   display: flex;
@@ -121,9 +121,10 @@
   background-color: gainsboro;
   border-radius: 8px;
   border:none;
-  height: 550px;
+  height: 450px;
   font-size: 15px;
   font-family : Noto Sans CJK KR;
+  margin-right: 0px;
 }
 
 .list .doneToDo {
@@ -145,7 +146,7 @@
   border-radius: 8px;
   border:none;
   color: white;
-  height: 550px;
+  height: 450px;
   font-size: 15px;
   font-family : Noto Sans CJK KR;
 }
@@ -178,4 +179,8 @@
   padding: 4px 6px;
   margin-left: 13px;
   align-items: right;
+}
+
+.listDone {
+  text-decoration: line-through;
 }
