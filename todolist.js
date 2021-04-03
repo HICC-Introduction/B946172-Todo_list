@@ -1,14 +1,11 @@
-//날짜 기록
-
-//시간 기록
 const timer = () => {
     const clock = document.querySelector('.clock');
     const time = new Date();
     var year = time.getFullYear();
     var month = time.getMonth();
-    // 달을 받아옵니다 
+
     var clockDate = time.getDate();
-    // 몇일인지 받아옵니다 
+
     let h = time.getHours();
     if (h == 0) {
         h = 12;
@@ -32,75 +29,61 @@ const start = () => {
 
 window.onload = start();
 
-//시간 끝
 
 
 
 
 
+let itemList = [];
+let inputButton = document.querySelector(".okay");
+inputButton.addEventListener("click", addItem);
 
-const toDoForm = document.querySelector('.js-toDoForm'),
-    toDoInput = toDoForm.querySelector("input"),
-    toDoList = document.querySelector('.js-toDoList');
-
-const TODOS_LS = 'toDos';
-
-let toDos = [];  
-function saveToDos () {  
-    localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
-}
-
-
-function paintToDo(text) {
-    const li = document.createElement('li');
-    const span = document.createElement('span');
-    span.innerHTML = text;
-    li.appendChild(span);
-    toDoList.appendChild(li);
-    
-    const toDoObj = {
-        text : text,
-        id : toDos.length+1
+function addItem() {
+    let item = document.querySelector(".addToDoInfo").value;
+    if (item != null) {
+        itemList.push(item);
+        document.querySelector(".addToDoInfo").value = "";
+        document.querySelector(".addToDoInfo").focus();
     }
-
-    toDos.push(toDoObj);
-    saveToDos(toDos);
-}
-
-function handleSubmit(event) {
-    event.preventDefault();
-    const toDoText = toDoInput.value;
-    paintToDo(toDoText);
-    toDoInput.value="";
-    
     
 }
 
-function loadToDolist() {
-    const getList = JSON.parse(localStorage.getItem(TODOS_LS));
-    if(getList === null){
 
-    }else{
-        getList.forEach(function(todo){
-            paintToDo(todo.text);
-        })
-    }
+
+let i = j = 0;
+
+
+function addActiveList() {
+    let todovalue = document.querySelector(".addToDoInfo").value;
+    let li = document.createElement("li");
+    let button = document.createElement("button");
+    let del = document.createElement("button");
+
+
+    button.className = "doneBtn" + i;
+    li.innerHTML = todovalue;
+    button.innerHTML = "✔";
+    li.appendChild(button);
+    document.querySelector(".listActive").appendChild(li);
+    document.querySelector(".doneBtn"+i).addEventListener('click', doneActive);
+    document.querySelector(".addToDoInfo").value = '';
+    i++;
+
+
+    return false;
 }
 
 
-// 삭제버튼 구현해보기
 
-
-
-
-
-
-
-
-function init() {
-    loadToDolist();
-    toDoForm.addEventListener('submit',handleSubmit);
-
+function doneActive() {;
+    let content = this.parentNode;
+    this.innerHTML = "❌";
+    this.className = "deleteBtn" + j;
+    document.querySelector(".deleteBtn"+j).addEventListener('click', deleteDone);
+    j++;
+    document.querySelector(".listDone").appendChild(content);
 }
 
-init();
+function deleteDone() {
+    this.parentNode.parentNode.removeChild(this.parentNode);
+};

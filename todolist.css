@@ -1,50 +1,181 @@
-#add-button {
-  width: 8%;
-  background-color: #4C49F8;
-  border-radius: 5px;
-  border: 3px #4C49F8;
-  color: white;
-  font-weight: bold;
-  font-family: 'Noto Sans CJK KR';
-}
-
-#input {
-width: 43%;
-border-radius: 5px;
-background-color: white;
-}
-
 #left {
-color: white;
-font-weight: bold;
-font-family: 'Noto Sans CJK KR';
-font-size: 47px;
+  width:30%;
 }
 
 #leftText {
-color: white;
-font-weight: bold;
-font-family: 'Noto Sans CJK KR';
-font-size: 47px;
+  color: white;
+  font-weight: bold;
+  font-family: 'Noto Sans CJK KR';
+  font-size: 65px;
+  margin-top: 20%;
+  margin-left: 10px;
 }
 
 #clock {
-font-size: 37px;
-font-weight: normal;
-text-decoration: underline;
+  font-size: 50px;
+  font-weight: normal;
+  text-decoration: underline;
 }
 
-#whatToDo {
-float: left;
-background-color: #DDDDDD;
-height: 70vh;
-box-shadow: 2px 2px 2px 2px #999;
+.right {
+  width: 70%
+}
+
+
+
+
+
+
+
+
+:root {
+  --bg-color: #F1F3F8;
+  --line-color:#D6E0F0;
+  --font:'Raleway';
+}
+
+
+
+.inputText {
+  width: 70%
+}
+
+
+/*투두 리스트 입력칸*/
+.addToDo {
+  display: flex;
+  margin-top: 15%;
+  margin-bottom: 10%;
+  width: 90%;
+}
+
+.addTodoInfo .input-null {
+  border: 2px solid red;
+}
+
+.addToDoInfo {
+  width: 70%;
+  line-height: normal;
+  padding: 4px;
+
+  height: 36px;
+  font-size: 24px;
+
+  border-radius: 8px;
+  border-color: #4C49F8;
+
 
 }
 
-#whatYouDone {
-float: left;
-background-color: #4F4F4F;
-height: 70vh;
-box-shadow: 2px 2px 2px 2px #999;
+.okay {
+  width: 10%;
+  box-sizing: border-box;
+  background: #4C49F8;
+  border-radius: 6px;
+  border: 0px;
+  font-weight: bold;
+  font-family : Noto Sans CJK KR;
+  color: white;
+  font-size: 15pt;
+  margin-left: 15px;
+}
+
+
+
+
+
+.addToDoInfo::placeholder {
+  font-style: oblique;
+  font-family: var(--font);
+  color: var(--line-color);
+  margin: 2px;
+}
+
+
+
+
+
+/*투두 리스트*/
+.list {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 0 auto;
+}
+.list .activeToDo {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-top: 15px;
+  width: 450px;
+  background-color: gainsboro;
+  border-radius: 8px;
+  border:none;
+  font-size: 15px;
+  font-family : Noto Sans CJK KR;
+}
+
+.list .activeBox {
+  align-items: left;
+  width: 450px;
+  background-color: gainsboro;
+  border-radius: 8px;
+  border:none;
+  height: 550px;
+  font-size: 15px;
+  font-family : Noto Sans CJK KR;
+}
+
+.list .doneToDo {
+  align-items: left;
+  margin-top: 15px;
+  width: 450px;
+  background-color: dimgray;
+  border-radius: 8px;
+  border:none;
+  color: white;
+  font-size: 15px;
+  font-family : Noto Sans CJK KR;
+}
+
+.list .doneBox {
+  align-items: left;
+  width: 450px;
+  background-color: dimgray;
+  border-radius: 8px;
+  border:none;
+  color: white;
+  height: 550px;
+  font-size: 15px;
+  font-family : Noto Sans CJK KR;
+}
+
+
+.list .activeTitle, .list .doneTitle {
+  padding: 20px;
+  border-bottom: 10px;
+  font-weight: bold;
+  margin-left: 10px
+}
+.list ul {
+  padding:0;
+  margin: 24px;
+}
+.list li {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  width: auto;
+  margin: 6px;
+  padding: 6px;
+  border-bottom: 0px ;
+}
+.list button {
+  border: none;
+  border-radius: 8px;
+  background-color: none;
+  font-family: var(--font);
+  padding: 4px 6px;
+  margin-left: 13px;
+  align-items: right;
 }
