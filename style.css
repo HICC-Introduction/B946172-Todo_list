@@ -184,3 +184,26 @@
 .listDone {
   text-decoration: line-through;
 }
+
+
+
+
+.editButton {
+  font-size: 1.4rem;
+  margin: 0 0.75rem;
+  font-family: Arial, Helvetica, sans-serif;
+  background:none;
+  outline:none;
+  color:lime;
+  border:none;
+}
+
+.removeButton {
+  font-size: 1.4rem;
+  margin: 0 0.75rem;
+  font-family: Arial, Helvetica, sans-serif;
+  background:none;
+  outline:none;
+  color: RED;
+  border:none;
+}
