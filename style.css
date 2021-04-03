@@ -78,6 +78,7 @@
   color: white;
   font-size: 15pt;
   margin-left: 15px;
+  cursor: pointer;
 }
 
 
@@ -188,22 +189,32 @@
 
 
 
-.editButton {
-  font-size: 1.4rem;
-  margin: 0 0.75rem;
-  font-family: Arial, Helvetica, sans-serif;
-  background:none;
-  outline:none;
-  color:lime;
-  border:none;
-}
-
 .removeButton {
-  font-size: 1.4rem;
-  margin: 0 0.75rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  margin-right : 20px;
+  font-family : Arial, Helvetica, sans-serif;
   background:none;
   outline:none;
   color: RED;
   border:none;
+  cursor: pointer;
+  float:right;
+}
+
+.editButton {
+  font-size: 15px;
+  margin-right: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  background:none;
+  outline:none;
+  border:none;
+  cursor: pointer;
+  float: right;
+}
+
+
+.item_input {
+  background:none;
+  border:none;
+  margin-left:30px;
 }
