@@ -37,7 +37,7 @@
 
 
 .inputText {
-  width: 70%
+  width: 100%;
 }
 
 
@@ -54,20 +54,24 @@
 
 
 .addToDoInfo {
-  width: 70%;
+  width: 50%;
   line-height: normal;
   padding: 4px;
 
-  height: 36px;
+  height: 27px;
   font-size: 24px;
 
   border-radius: 8px;
   border-color: #4C49F8;
   float:center;
+  margin-left: 200px;
+  margin-top: 100px;
+  margin-bottom: 60px;
 
 }
 
 .okay {
+  height: 39px;
   width: 10%;
   box-sizing: border-box;
   background: #4C49F8;
@@ -89,7 +93,8 @@
   font-style: oblique;
   font-family: var(--font);
   color: var(--line-color);
-  margin: 2px;
+  margin: 15px;
+
 }
 
 
@@ -163,15 +168,7 @@
   padding:0;
   margin: 24px;
 }
-.list li {
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-  width: auto;
-  margin: 6px;
-  padding: 6px;
-  border-bottom: 0px ;
-}
+
 .list button {
   border: none;
   border-radius: 8px;
@@ -190,8 +187,8 @@
 
 
 .removeButton {
-  font-size: 15px;
-  margin-right : 20px;
+  font-size: 12px;
+  margin-right : -8px;
   font-family : Arial, Helvetica, sans-serif;
   background:none;
   outline:none;
@@ -199,17 +196,38 @@
   border:none;
   cursor: pointer;
   float:right;
+  height: 20px;
+  font-weight: bold;
+  margin-left:-10px;
 }
 
 .editButton {
-  font-size: 15px;
-  margin-right: 30px;
+  font-size: 18px;
+  margin-top:-6px;
+  margin-right: 16px;
   font-family: Arial, Helvetica, sans-serif;
   background:none;
   outline:none;
   border:none;
   cursor: pointer;
   float: right;
+  height: 20px;
+  font-weight: bold;
+  margin-left: -30px;
+}
+
+.doneButton {
+  font-size: 14px;
+  margin-right: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  background:none;
+  outline:none;
+  border:none;
+  cursor: pointer;
+  float: right;
+  height: 20px;
+  font-weight: bold;
+  margin-left: -30px;
 }
 
 
@@ -217,4 +235,9 @@
   background:none;
   border:none;
   margin-left:30px;
+  margin-bottom:16px;
+  font-weight: 440;
+  width: 310px;
+  word-break: break-all;
+  overflow: auto;
 }

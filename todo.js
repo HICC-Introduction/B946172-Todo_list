@@ -1,9 +1,4 @@
-"use strict"
 
-document.querySelector(".deco").addEventListener("click",function(e) { 
-    const tgt = e.target; 
-    if (tgt.classList.contains("fa-trash")) tgt.closest("li").remove(); 
-    })
 
 
 
@@ -41,7 +36,7 @@ window.onload = start();
 
 
 
-
+//------시계 마무리.
 
 
 
@@ -67,26 +62,35 @@ class item{
 
 
 
+
+
+
         let editButton = document.createElement('button');
-        editButton.innerHTML ="수정";
+        editButton.innerHTML ="🛠";
         editButton.classList.add('editButton');
 
         let removeButton = document.createElement('button');
-        removeButton.innerHTML = "삭제";
+        removeButton.innerHTML = "❌";
         removeButton.classList.add('removeButton');
+
+        let doneButton = document.createElement('button');
+        doneButton.innerHTML ="✔";
+        doneButton.classList.add('doneButton');
 
 
 
         container.appendChild(itemBox);
+
 
         itemBox.appendChild(input);
         itemBox.appendChild(editButton);
         itemBox.appendChild(removeButton);
 
 
+
         editButton.addEventListener("click", () => this.edit(input) );
         removeButton.addEventListener("click", () => this.remove(itemBox));
-
+        doneButton.addEventListener("click",() => this.move(itemBox));
 
     }
 
@@ -97,7 +101,13 @@ class item{
     remove(item){
         container.removeChild(item);
     }
+
+    move(item){
+        container.
+    }
+
 }
+
 
 
 
@@ -108,9 +118,11 @@ function check(){
     }
 }
 
+
 addButton.addEventListener('click', check);
 window.addEventListener('keydown', (e) => {
     if(e.which == 13){
         check();
     }
 })
+
