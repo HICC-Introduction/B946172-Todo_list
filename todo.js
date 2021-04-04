@@ -122,7 +122,7 @@ class item{
 
     done(item) {
 
-        container.cloneNode(item);
+        container.clone(item);
         container.removeChild(item);
 
     }
