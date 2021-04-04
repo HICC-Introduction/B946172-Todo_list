@@ -100,11 +100,7 @@ class item{
 
         editButton.addEventListener("click", () => this.edit(input) );
         removeButton.addEventListener("click", () => this.remove(itemBox));
-        doneButton.addEventListener("click", event => {
-            if (event.target.tagName === 'LI') {
-                event.target.classList.toggle('.checked');
-            }
-        });
+            
     }
 
 
@@ -120,16 +116,11 @@ class item{
 
 
 
-    done(item) {
-
-        container.clone(item);
-        container.removeChild(item);
-
     }
 
 
 
-}
+
 
 
 

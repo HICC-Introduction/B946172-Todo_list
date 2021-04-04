@@ -244,19 +244,11 @@
   margin-left:30px;
   margin-bottom:16px;
   font-weight: bold;
-  width: 500px;
+  width: 480px;
   word-break: break-all;
   overflow: auto;
 }
 
-
-
-
-ul li.checked {
-  background: #ddd;
-  color: #7e7e80;
-  text-decoration: line-through;
-}
 
 li{
   list-style:none;
