@@ -30,11 +30,6 @@
 
 
 
-:root {
-  --bg-color: #F1F3F8;
-  --line-color:#D6E0F0;
-  --font:'Raleway';
-}
 
 
 
@@ -94,7 +89,7 @@
 .addToDoInfo::placeholder {
   font-style: oblique;
   font-family: var(--font);
-  color: var(--line-color);
+  color:rgb(170, 174, 187);
   margin: 15px;
 
 }
