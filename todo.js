@@ -43,6 +43,8 @@ window.onload = start();
 const addButton = document.querySelector(".okay");
 var input = document.querySelector(".addToDoInfo");
 const container = document.querySelector(".container");
+const doneContainer = document.querySelector(".doneContainer");
+var clone = document.getElementById(container);
 
 class item{
     constructor(itemName){
@@ -57,8 +59,15 @@ class item{
         input.type = "text";
 
 
-        let itemBox = document.createElement('div');
+        let itemBox = document.createElement('li');
         itemBox.classList.add('item');
+
+
+
+
+
+
+
 
 
 
@@ -74,8 +83,9 @@ class item{
         removeButton.classList.add('removeButton');
 
         let doneButton = document.createElement('button');
-        doneButton.innerHTML ="✔";
+        doneButton.innerHTML = "✔";
         doneButton.classList.add('doneButton');
+
 
 
 
@@ -85,14 +95,18 @@ class item{
         itemBox.appendChild(input);
         itemBox.appendChild(editButton);
         itemBox.appendChild(removeButton);
-
+        itemBox.appendChild(doneButton);
 
 
         editButton.addEventListener("click", () => this.edit(input) );
         removeButton.addEventListener("click", () => this.remove(itemBox));
-        doneButton.addEventListener("click",() => this.move(itemBox));
-
+        doneButton.addEventListener("click", event => {
+            if (event.target.tagName === 'LI') {
+                event.target.classList.toggle('.checked');
+            }
+        });
     }
+
 
     edit(input){
         input.disabled = !input.disabled;
@@ -102,11 +116,21 @@ class item{
         container.removeChild(item);
     }
 
-    move(item){
-        container.
+
+
+
+
+    done(item) {
+
+        container.cloneNode(item);
+        container.removeChild(item);
+
     }
 
+
+
 }
+
 
 
 
@@ -125,4 +149,7 @@ window.addEventListener('keydown', (e) => {
         check();
     }
 })
+
+
+
 

@@ -1,5 +1,7 @@
 #left {
   width:30%;
+  margin: -8px;
+
 }
 
 #leftText {
@@ -113,7 +115,7 @@
   flex-direction: column;
   align-items: left;
   margin-top: 15px;
-  width: 450px;
+  width: 90vh;
   background-color: gainsboro;
   border-radius: 8px;
   border:none;
@@ -123,14 +125,15 @@
 
 .list .activeBox {
   align-items: left;
-  width: 450px;
+  width: 90vh;
   background-color: gainsboro;
   border-radius: 8px;
   border:none;
-  height: 450px;
+  height: 65vh;
   font-size: 15px;
   font-family : Noto Sans CJK KR;
   margin-right: 0px;
+  overflow: auto;
 }
 
 .list .doneToDo {
@@ -143,6 +146,7 @@
   color: white;
   font-size: 15px;
   font-family : Noto Sans CJK KR;
+  overflow: auto;
 }
 
 .list .doneBox {
@@ -158,8 +162,9 @@
 }
 
 
-.list .activeTitle, .list .doneTitle {
+.list .activeTitle {
   padding: 20px;
+  text-decoration: underline;
   border-bottom: 10px;
   font-weight: bold;
   margin-left: 10px
@@ -179,16 +184,14 @@
   align-items: right;
 }
 
-.listDone {
-  text-decoration: line-through;
-}
+
 
 
 
 
 .removeButton {
-  font-size: 12px;
-  margin-right : -8px;
+  font-size: 13px;
+  margin-right : -7px;
   font-family : Arial, Helvetica, sans-serif;
   background:none;
   outline:none;
@@ -198,13 +201,14 @@
   float:right;
   height: 20px;
   font-weight: bold;
-  margin-left:-10px;
+  margin-left:-13px;
+  margin-top: -1px;
 }
 
 .editButton {
   font-size: 18px;
   margin-top:-6px;
-  margin-right: 16px;
+  margin-right: 30px;
   font-family: Arial, Helvetica, sans-serif;
   background:none;
   outline:none;
@@ -217,8 +221,9 @@
 }
 
 .doneButton {
-  font-size: 14px;
-  margin-right: 16px;
+  font-size: 18px;
+  margin-top:-5px;
+  margin-right: -3px;
   font-family: Arial, Helvetica, sans-serif;
   background:none;
   outline:none;
@@ -227,8 +232,10 @@
   float: right;
   height: 20px;
   font-weight: bold;
-  margin-left: -30px;
+  margin-left: 0px;
+  color:green;
 }
+
 
 
 .item_input {
@@ -236,8 +243,21 @@
   border:none;
   margin-left:30px;
   margin-bottom:16px;
-  font-weight: 440;
-  width: 310px;
+  font-weight: bold;
+  width: 500px;
   word-break: break-all;
   overflow: auto;
+}
+
+
+
+
+ul li.checked {
+  background: #ddd;
+  color: #7e7e80;
+  text-decoration: line-through;
+}
+
+li{
+  list-style:none;
 }
